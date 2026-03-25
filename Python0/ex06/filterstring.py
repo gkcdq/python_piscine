@@ -1,6 +1,11 @@
 import sys
 from ft_filter import ft_filter
 
+"""
+__doc__ This program use ft_filter function
+goal : know wich words* is larger than the number*
+*received in arguments
+"""
 
 if __name__ == "__main__":
     if (len(sys.argv) != 3):
