@@ -45,6 +45,6 @@ def count_in_string(s):
 
 if __name__ == "__main__":
     if (len(sys.argv) > 2):
-        print("AssertionError: provided only one argument.")
+        print("AssertionError: provid only one argument.")
     else:
         count_in_string(sys.argv[1])
