@@ -2,32 +2,21 @@ import sys
 from ft_filter import ft_filter
 
 
-def random(n):
-    if (n % 2 == 0):
-        return True
-    else:
-        return False
-
-
-number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-
-def check_line(words):
-    
-
-
 if __name__ == "__main__":
     if (len(sys.argv) != 3):
-        print("AssertionError: provid 2 arguments <list of words> <length>")
-    if (sys.argv[1].isdigit()):
-        print("AssertionError: first argument need to be a <list of words>")
-    if (sys.argv[2].isdigit()):
+        print("AssertionError: the arguments are bad")
+        sys.exit(1)
+    elif (sys.argv[1].isdigit()):
+        print("AssertionError: the arguments are bad")
+        sys.exit(1)
+    elif (sys.argv[2].isdigit()):
         {}
     else:
-        print("AssertionError: second argument need to be a <length>")
+        print("AssertionError: the arguments are bad")
+        sys.exit(1)
     words = sys.argv[1].split()
     if (len(words) <= 1):
-        print("AssertionError: first argument need to be a <list of words>")
-    if (check_line(words) == 0):
-        ft_filter(words, )
-        
+        print("AssertionError: the arguments are bad")
+        sys.exit(1)
+    result = ft_filter(lambda w: len(w) > int(sys.argv[2]), words)
+    print(list(result))
